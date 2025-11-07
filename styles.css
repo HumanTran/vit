@@ -46,15 +46,15 @@ body {
 }
 
 .avatar {
-  width: 88px;
-  height: 88px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 23px;
   color: #071029;
   background: linear-gradient(135deg, var(--accent), #60a5fa);
   box-shadow: 0 10px 30px rgba(2,6,23,0.55);
@@ -62,7 +62,7 @@ body {
 
 .name {
   margin: 8px 0 6px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
   letter-spacing: .5px;
   text-shadow: 0 3px 12px rgba(0,0,0,0.35);
@@ -78,8 +78,8 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 34px;
+  gap: 40px;
+  margin-top: -50px;
 }
 
 .link {
@@ -159,7 +159,7 @@ body {
 }
 
 .qr {
-  width: 96px;
+  width: 144px;
   height: auto;
   background: var(--glass);
   border: 1px solid var(--glass-border);
@@ -172,29 +172,6 @@ body {
   }
 }
 
-@media (max-width: 500px) {
-  :root {
-    --card-w: 92vw;
-  }
-  .avatar {
-    width: 72px;
-    height: 72px;
-    font-size: 18px;
-  }
-  .name {
-    font-size: 18px;
-  }
-  .link {
-    padding: 12px 14px;
-    gap: 12px;
-  }
-  .link .icon {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-}
-
 @media (max-height: 700px) {
   .card {
     padding: 18px 14px 14px;
@@ -203,16 +180,16 @@ body {
     margin-top: 20px;
   }
   .links {
-    gap: 10px;
-    margin-top: 20px;
+    gap: 32px;
+    margin-top: -50px;
   }
   .avatar {
-    width: 64px;
-    height: 64px;
-    font-size: 16px;
+    width: 67px;
+    height: 67px;
+    font-size: 17px;
   }
   .name {
-    font-size: 16px;
+    font-size: 17px;
   }
   .bio {
     font-size: 11px;
@@ -235,9 +212,9 @@ body {
     margin-top: 10px;
   }
   .avatar {
-    width: 56px;
-    height: 56px;
-    font-size: 14px;
+    width: 59px;
+    height: 59px;
+    font-size: 15px;
   }
   .name {
     font-size: 15px;
@@ -247,8 +224,8 @@ body {
     font-size: 10px;
   }
   .links {
-    gap: 8px;
-    margin-top: 16px;
+    gap: 24px;
+    margin-top: -40px;
   }
   .link {
     padding: 9px 12px;
@@ -263,6 +240,108 @@ body {
     margin: -8px 0 2px;
   }
   .qr {
-    width: 80px;
+    width: 120px;
+  }
+}
+
+/* iPhone XR: 414x896 */
+@media (min-width: 414px) and (max-width: 414px) and (min-height: 896px) {
+  .avatar {
+    width: 92px;
+    height: 92px;
+    font-size: 23px;
+  }
+  .name {
+    font-size: 21px;
+  }
+  .links {
+    gap: 40px;
+    margin-top: -50px;
+  }
+}
+
+/* iPhone 12 Pro: 390x844 */
+@media (min-width: 390px) and (max-width: 390px) and (min-height: 844px) {
+  .avatar {
+    width: 88px;
+    height: 88px;
+    font-size: 22px;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .links {
+    gap: 38px;
+    margin-top: -50px;
+  }
+}
+
+/* iPhone 14 Pro Max: 430x932 */
+@media (min-width: 430px) and (max-width: 430px) and (min-height: 932px) {
+  .avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 24px;
+  }
+  .name {
+    font-size: 22px;
+  }
+  .links {
+    gap: 42px;
+    margin-top: -50px;
+  }
+  .qr {
+    width: 150px;
+  }
+}
+
+/* Pixel 7: 412x915 */
+@media (min-width: 412px) and (max-width: 412px) and (min-height: 915px) {
+  .avatar {
+    width: 90px;
+    height: 90px;
+    font-size: 22px;
+  }
+  .name {
+    font-size: 21px;
+  }
+  .links {
+    gap: 40px;
+    margin-top: -50px;
+  }
+}
+
+/* Samsung Galaxy S8+: 360x740 */
+@media (min-width: 360px) and (max-width: 360px) and (max-height: 740px) {
+  .avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+  }
+  .name {
+    font-size: 18px;
+  }
+  .links {
+    gap: 28px;
+    margin-top: -45px;
+  }
+  .qr {
+    width: 110px;
+  }
+}
+
+/* Samsung Galaxy S20 Ultra: 412x915 */
+@media (min-width: 412px) and (max-width: 412px) and (min-height: 915px) {
+  .avatar {
+    width: 90px;
+    height: 90px;
+    font-size: 22px;
+  }
+  .name {
+    font-size: 21px;
+  }
+  .links {
+    gap: 40px;
+    margin-top: -50px;
   }
 }
