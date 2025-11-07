@@ -1,0 +1,390 @@
+/* Polished minimalist stylesheet/* Polished minimalist stylesheet
+
+   - Consolidated duplicates   - Consolidated duplicates
+
+   - Brightened background (vit.gif) with subtle overlay   - Brightened background (vit.gif) with subtle overlay
+
+   - Glassmorphism for link tiles & social icons   - Glassmorphism for link tiles & social icons
+
+   - Smooth hover/focus transitions & accessible focus ring   - Smooth hover/focus transitions & accessible focus ring
+
+*/*/
+
+
+
+:root {:root {
+
+  --card-w: 400px;  --card-w: 400px;
+
+  --accent: #6ee7b7;  --accent: #6ee7b7;
+
+  --glass: rgba(255,255,255,0.18);  --glass: rgba(255,255,255,0.18);
+
+  --glass-strong: rgba(255,255,255,0.26);  --glass-strong: rgba(255,255,255,0.26);
+
+  --glass-border: rgba(255,255,255,0.28);  --glass-border: rgba(255,255,255,0.28);
+
+  --bg-overlay-top: rgba(255,255,255,0.02);  --bg-overlay-top: rgba(255,255,255,0.02);
+
+  --bg-overlay-bottom: rgba(0,0,0,0.12);  --bg-overlay-bottom: rgba(0,0,0,0.12);
+
+  --focus: #6ee7b7;  --focus: #6ee7b7;
+
+}}
+
+
+
+* { box-sizing: border-box; }* { box-sizing: border-box; }
+
+html, body { height: 100%; }html, body { height: 100%; }
+
+body {body {
+
+  margin: 0;  margin: 0;
+
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  color: #fff;  color: #fff;
+
+  overflow: hidden;  overflow: hidden; /* single screen, no scroll */
+
+  background: url('vit.gif') center/cover no-repeat fixed;  background: url('vit.gif') center/cover no-repeat fixed;
+
+  background-color: #081229;  background-color: #081229; /* fallback */
+
+}}
+
+
+
+.bg-overlay { position: fixed; inset: 0; background: linear-gradient(180deg,var(--bg-overlay-top),var(--bg-overlay-bottom)); z-index: 0; }/* Overlay — brighter */
+
+.bg-overlay { position: fixed; inset: 0; background: linear-gradient(180deg,var(--bg-overlay-top),var(--bg-overlay-bottom)); z-index: 0; }
+
+.card { position: relative; z-index: 1; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 28px 18px 20px; max-width: var(--card-w); margin: 0 auto; }
+
+.profile { text-align: center; margin-top: 30px; }/* Layout */
+
+.card { position: relative; z-index: 1; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 28px 18px 20px; max-width: var(--card-w); margin: 0 auto; }
+
+.avatar { width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 22px; color: #071029; background: linear-gradient(135deg,var(--accent),#60a5fa); box-shadow: 0 10px 30px rgba(2,6,23,0.55); }.profile { text-align: center; margin-top: 30px; }
+
+.name { margin: 8px 0 6px; font-size: 20px; font-weight: 600; letter-spacing: .5px; text-shadow: 0 3px 12px rgba(0,0,0,0.35); }
+
+.bio { margin: 0; font-size: 13px; color: rgba(255,255,255,0.95); }/* Avatar */
+
+.avatar { width: 88px; height: 88px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 22px; color: #071029; background: linear-gradient(135deg,var(--accent),#60a5fa); box-shadow: 0 10px 30px rgba(2,6,23,0.55); }
+
+.socials { display: flex; gap: 12px; justify-content: center; margin-top: 14px; }.name { margin: 8px 0 6px; font-size: 20px; font-weight: 600; letter-spacing: .5px; text-shadow: 0 3px 12px rgba(0,0,0,0.35); }
+
+.socials a { width: 40px; height: 40px; border-radius: 14px; background: var(--glass); border: 1px solid var(--glass-border); display: inline-flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; backdrop-filter: blur(8px) saturate(125%); transition: box-shadow .25s, transform .25s, background .25s; }.bio { margin: 0; font-size: 13px; color: rgba(255,255,255,0.95); }
+
+.socials a:hover { background: var(--glass-strong); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+
+.socials a:active { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.45); }/* Social icons */
+
+.socials a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }.socials { display: flex; gap: 12px; justify-content: center; margin-top: 14px; }
+
+.socials a { width: 40px; height: 40px; border-radius: 14px; background: var(--glass); border: 1px solid var(--glass-border); display: inline-flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; backdrop-filter: blur(8px) saturate(125%); transition: box-shadow .25s, transform .25s, background .25s; }
+
+.links { width: 100%; display: flex; flex-direction: column; gap: 14px; margin-top: 34px; }.socials a:hover { background: var(--glass-strong); transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+
+.link { position: relative; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 16px; text-decoration: none; color: rgba(255,255,255,0.95); font-weight: 600; background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(10px) saturate(130%); box-shadow: 0 8px 26px -4px rgba(0,0,0,0.45); transition: transform .25s, box-shadow .25s, background .25s; }.socials a:active { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.45); }
+
+.link .icon { width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(145deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08)); display: inline-flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; }.socials a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.link .label { flex: 1; text-align: left; }
+
+.link .more { opacity: .8; }/* Links */
+
+.link:hover { transform: translateY(-4px); background: var(--glass-strong); box-shadow: 0 14px 32px -6px rgba(0,0,0,0.55); }.links { width: 100%; display: flex; flex-direction: column; gap: 14px; margin-top: 34px; }
+
+.link:active { transform: translateY(-2px); box-shadow: 0 10px 24px -4px rgba(0,0,0,0.6); }.link { position: relative; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 16px; text-decoration: none; color: rgba(255,255,255,0.95); font-weight: 600; background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(10px) saturate(130%); box-shadow: 0 8px 26px -4px rgba(0,0,0,0.45); transition: transform .25s, box-shadow .25s, background .25s; }
+
+.link:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }.link .icon { width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(145deg, rgba(255,255,255,0.22), rgba(255,255,255,0.08)); display: inline-flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; }
+
+.link .label { flex: 1; text-align: left; }
+
+.link:hover::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 70%); pointer-events: none; }.link .more { opacity: .8; }
+
+.link:hover { transform: translateY(-4px); background: var(--glass-strong); box-shadow: 0 14px 32px -6px rgba(0,0,0,0.55); }
+
+.footer { margin-top: 10px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.7); }.link:active { transform: translateY(-2px); box-shadow: 0 10px 24px -4px rgba(0,0,0,0.6); }
+
+.link:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.qr-wrapper { display:flex; justify-content:center; margin:-12px 0 4px; }
+
+.qr { width:96px; height:auto; background: var(--glass); border:1px solid var(--glass-border); box-shadow: 0 6px 18px rgba(0,0,0,0.35); }/* Interactive glow (optional subtle) */
+
+.link:hover::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 70%); pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) { .link, .socials a { transition: none; } }
+
+/* Footer */
+
+@media (max-width:500px) {.footer { margin-top: 10px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.7); }
+
+  :root { --card-w: 92vw; }
+
+  .avatar { width:72px; height:72px; font-size:18px; }/* QR in footer */
+
+  .name { font-size:18px; }.qr-wrapper { display:flex; justify-content:center; margin:-12px 0 4px; }
+
+  .socials a { width:36px; height:36px; border-radius:12px; }.qr { width:96px; height:auto; background: var(--glass); border:1px solid var(--glass-border); box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+
+  .link { padding:12px 14px; gap:12px; }
+
+  .link .icon { width:40px; height:40px; font-size:18px; }/* Accessibility prefers-reduced-motion */
+
+}@media (prefers-reduced-motion: reduce) { .link, .socials a { transition: none; } }
+
+
+
+@media (max-height:700px) {/* Mobile adjustments */
+
+  .card { padding: 18px 14px 14px; }@media (max-width:500px) {
+
+  .profile { margin-top: 20px; }  :root { --card-w: 92vw; }
+
+  .links { gap: 10px; }  .avatar { width:72px; height:72px; font-size:18px; }
+
+  .avatar { width:64px; height:64px; font-size:16px; }  .name { font-size:18px; }
+
+  .name { font-size:16px; }  .socials a { width:36px; height:36px; border-radius:12px; }
+
+  .bio { font-size:11px; }  .link { padding:12px 14px; gap:12px; }
+
+  .link { padding:10px 12px; }  .link .icon { width:40px; height:40px; font-size:18px; }
+
+  .link .icon { width:36px; height:36px; font-size:16px; }}
+
+}
+
+/* Very short viewport (folded phones etc.) */
+@media (max-height:700px) {
+  .card { padding: 18px 14px 14px; }
+  .profile { margin-top: 20px; }
+  .links { gap: 10px; margin-top: 20px; }
+  .avatar { width:64px; height:64px; font-size:16px; }
+  .name { font-size:16px; }
+  .bio { font-size:11px; }
+  .link { padding:10px 12px; }
+  .link .icon { width:36px; height:36px; font-size:16px; }
+}
+
+@media (max-width:380px) and (max-height:670px) {
+  .card { padding: 12px 12px 10px; }
+  .profile { margin-top: 10px; }
+  .avatar { width:56px; height:56px; font-size:14px; }
+  .name { font-size:15px; margin: 6px 0 4px; }
+  .bio { font-size:10px; }
+  .socials { gap: 8px; margin-top: 10px; }
+  .socials a { width:32px; height:32px; font-size:12px; }
+  .links { gap: 8px; margin-top: 16px; }
+  .link { padding:9px 12px; gap:10px; }
+  .link .icon { width:32px; height:32px; font-size:16px; }
+  .qr-wrapper { margin:-8px 0 2px; }
+  .qr { width:80px; }
+}
+/* Cleaned styles.css — removed all .featured rules and duplicates.
+   Mobile-first, uses vit.gif as background and forces content to fit one viewport.
+*/
+:root{
+  --card-w:360px;
+  --accent:#6ee7b7;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#fff;
+  overflow:hidden; /* no scrolling */
+  background: url('vit.gif') center/cover no-repeat fixed;
+  background-color:#081229;
+}
+
+/* subtle overlay to improve contrast while keeping GIF sharp */
+.bg-overlay{position:fixed;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.24));z-index:0}
+
+.card{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:16px 12px;max-width:var(--card-w);margin:0 auto}
+.profile{text-align:center;margin:6px 0}
+
+/* move profile slightly down so avatar/name/bio sit lower on the screen */
+.card{padding-top:44px}
+.profile{margin-top:14px}
+.avatar{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 6px auto;font-weight:700;font-size:20px;color:#071029;background:linear-gradient(135deg,var(--accent),#60a5fa);box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+.name{margin:4px 0 4px 0;font-size:17px}
+.bio{margin:0;color:rgba(255,255,255,0.92);font-size:12px}
+
+.socials{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.socials a{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,0.12);display:inline-flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;box-shadow:0 6px 12px rgba(2,6,23,0.35)}
+
+.links{display:flex;flex-direction:column;gap:10px;margin-top:8px;width:100%}
+.link{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;text-decoration:none;color:rgba(255,255,255,0.95);background:rgba(6,6,6,0.35);font-weight:600;box-shadow:0 6px 18px rgba(2,6,23,0.45);transition:transform .12s ease,box-shadow .12s ease}
+.link .icon{width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,0.12);display:inline-flex;align-items:center;justify-content:center;font-size:16px}
+.link .label{flex:1;text-align:left;padding-right:6px}
+.link .more{opacity:0.85}
+.link:hover{transform:translateY(-3px);box-shadow:0 16px 28px rgba(2,6,23,0.5)}
+
+.footer{margin-top:8px;text-align:center;color:rgba(255,255,255,0.75);font-size:12px}
+
+/* Responsive tweaks */
+@media (max-width:420px){:root{--card-w:92vw}.avatar{width:72px;height:72px;font-size:18px}.socials a{width:32px;height:32px}.link .icon{width:32px;height:32px;padding:0}}
+@media (max-height:700px){.card{padding:10px 8px}.avatar{width:60px;height:60px;font-size:16px}.name{font-size:15px}.bio{font-size:11px}.link{padding:8px 8px}.card{justify-content:space-around}}
+
+/* End of cleaned styles */
+/* --- Override để đảm bảo KHÔNG cuộn và mọi nội dung vừa trong viewport --- */
+body{overflow:hidden;} /* khóa cuộn trang */
+
+/* Ép card chính vừa chiều cao viewport, sắp xếp theo cột và thu nhỏ khoảng cách */
+.card{
+  position:relative; z-index:1;
+  height:100vh; /* bắt vừa 1 màn hình, không cho kéo xuống */
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:16px 10px; /* giảm padding để vừa nội dung */
+}
+/* Final overrides (placed at file end) để đảm bảo ghi đè và KHÔNG cuộn) */
+body{overflow:hidden;} /* khóa cuộn trang */
+.card{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:16px 10px}
+.profile{margin-bottom:6px}
+/* Enforce additional 20px shift requested by user */
+/* Add as final !important rules to override duplicates */
+.card{padding-top:64px !important}
+.profile{margin-top:34px !important}
+/* FORCE overrides cuối cùng để KHÔNG cuộn (sử dụng !important để ghi đè mọi quy tắc trước) */
+body{overflow:hidden !important}
+.card{height:100vh !important;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:space-between !important;padding:12px 8px !important}
+.avatar{width:72px !important;height:72px !important;font-size:18px !important}
+.name{font-size:16px !important}
+.bio{font-size:11px !important}
+.links{gap:8px !important;margin-top:6px !important}
+.link{padding:8px 8px !important;border-radius:12px !important}
+.featured img{width:60px !important;height:60px !important}
+@media (max-height:700px){.card{padding:8px 6px !important}.avatar{width:56px !important;height:56px !important}.featured img{width:48px !important;height:48px !important}.link{padding:6px 6px !important}.card > *{max-width:96vw !important}}
+.avatar{width:80px;height:80px;font-size:20px;margin-bottom:6px}
+.name{font-size:17px}
+.bio{font-size:12px}
+.socials{gap:8px;margin-top:8px}
+.socials a{width:34px;height:34px}
+.featured{margin:6px 0 10px 0}
+.featured .f-inner{padding:10px}
+.featured img{width:72px;height:72px}
+.links{gap:8px;margin-top:6px}
+.link{padding:9px 10px;border-radius:12px}
+.link .icon{width:34px;height:34px}
+@media (max-height:700px){.card{padding:10px 8px}.avatar{width:64px;height:64px;font-size:18px}.name{font-size:15px}.bio{font-size:11px}.featured img{width:60px;height:60px}.link{padding:8px 8px}.card > *{max-width:94vw}}
+
+.profile{margin-bottom:6px}
+.avatar{width:80px;height:80px;font-size:20px;margin-bottom:6px}
+.name{font-size:17px}
+.bio{font-size:12px}
+
+.socials{gap:8px;margin-top:8px}
+.socials a{width:34px;height:34px}
+
+.featured{margin:6px 0 10px 0}
+.featured .f-inner{padding:10px}
+.featured img{width:72px;height:72px}
+
+.links{gap:8px;margin-top:6px}
+.link{padding:9px 10px;border-radius:12px}
+.link .icon{width:34px;height:34px}
+
+/* Nếu viewport rất thấp, thu nhỏ thêm để tránh overflow */
+@media (max-height:700px){
+  .card{padding:10px 8px}
+  .avatar{width:64px;height:64px;font-size:18px}
+  .name{font-size:15px}
+  .bio{font-size:11px}
+  .featured img{width:60px;height:60px}
+  .link{padding:8px 8px}
+  .card > *{max-width:94vw}
+}
+/* styles.css */
+:root{
+  --card-w: 360px;
+  --accent: #6ee7b7;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#fff;
+  /* vit.gif phải nằm trong cùng thư mục */
+  background: url('vit.gif') center/cover no-repeat fixed;
+  background-color:#081229; /* fallback */
+}
+/* mờ lớp phủ để chữ dễ đọc */
+.bg-overlay{
+  position:fixed;inset:0;
+  /* Giữ overlay màu nhẹ nhưng nền SÁNG hơn theo yêu cầu */
+  background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.18));
+  z-index:0;
+}
+.card{
+  position:relative; z-index:1;
+  min-height:100vh;
+  display:flex;
+  align-items:center; justify-content:center;
+  padding:40px 16px;
+}
+.card > *{width:100%; max-width:var(--card-w)}
+.profile{ text-align:center; margin-bottom:18px }
+.avatar{
+  width:112px;height:112px;border-radius:50%;
+  margin:0 auto 12px auto;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:28px;color:#071029;
+  background:linear-gradient(135deg,var(--accent),#60a5fa);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
+.name{margin:6px 0 4px 0;font-size:20px}
+.bio{margin:0;color:rgba(255,255,255,0.9);font-size:13px}
+.links{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.link{
+  display:inline-block;padding:14px 18px;border-radius:12px;text-align:center;text-decoration:none;
+  color:#071029;background:rgba(255,255,255,0.9);font-weight:600;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);transition:transform .14s ease, box-shadow .14s ease;
+}
+.link:hover{transform:translateY(-4px);box-shadow: 0 18px 30px rgba(2,6,23,0.5)}
+.socials{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.socials a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.12);display:inline-flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;box-shadow:0 6px 12px rgba(2,6,23,0.35)}
+
+.links{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.link{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;text-decoration:none;color:rgba(255,255,255,0.95);background:rgba(6,6,6,0.35);font-weight:600;box-shadow:0 6px 18px rgba(2,6,23,0.45);transition:transform .12s ease,box-shadow .12s ease}
+.link .icon{width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,0.12);display:inline-flex;align-items:center;justify-content:center;font-size:18px}
+.link .label{flex:1;text-align:left;padding-right:6px}
+.link .more{opacity:0.8}
+.link:hover{transform:translateY(-3px);box-shadow:0 16px 28px rgba(2,6,23,0.5)}
+
+.featured{
+  margin:6px 0 12px 0;background:rgba(255,255,255,0.95);color:#111;border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(2,6,23,0.45);
+}
+.featured .f-inner{display:flex;gap:12px;align-items:center;padding:12px}
+.featured img{width:84px;height:84px;border-radius:10px;object-fit:cover}
+.featured .f-meta{flex:1}
+.featured .f-meta .title{font-weight:700;margin-bottom:6px}
+.featured .f-meta .sub{font-size:13px;color:#444}
+.footer{margin-top:16px;text-align:center;color:rgba(255,255,255,0.75)}
+/* responsive */
+@media (max-width:420px){:root{--card-w:92vw}
+  .avatar{width:96px;height:96px}
+}
+/* Move links block up by 30px as requested */
+.links{margin-top:-170px !important}
+
+/* If you prefer this only on mobile, replace above with:
+   @media (max-width:420px){ .links{margin-top:-30px !important} } */
+
+/* ===== Bright mode overrides ===== */
+:root{ --glass-bg: rgba(255,255,255,0.18); --glass-strong: rgba(255,255,255,0.24) }
+/* Brighter overlay while keeping readability */
+.bg-overlay{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)) !important }
+
+/* Glassy brighter tiles */
+.link{ background:var(--glass-bg) !important; border:1px solid rgba(255,255,255,0.22); backdrop-filter: blur(6px) saturate(120%); }
+.socials a{ background:var(--glass-bg) !important; border:1px solid rgba(255,255,255,0.22); backdrop-filter: blur(6px) saturate(120%); }
+.bio{ color:rgba(255,255,255,0.96) !important }
+.name{ text-shadow: 0 2px 6px rgba(0,0,0,0.25) }
+
