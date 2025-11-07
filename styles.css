@@ -1,9 +1,9 @@
 :root {
   --card-w: 400px;
   --accent: #6ee7b7;
-  --glass: rgba(255,255,255,0.18);
+  --glass: rgba(255,255,255,0.1);
   --glass-strong: rgba(255,255,255,0.26);
-  --glass-border: rgba(255,255,255,0.28);
+  --glass-border: rgba(255,255,255,0.2);
   --bg-overlay-top: rgba(255,255,255,0.02);
   --bg-overlay-bottom: rgba(0,0,0,0.12);
   --focus: #6ee7b7;
@@ -94,7 +94,7 @@ body {
   font-weight: 600;
   background: var(--glass);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: blur(3px) saturate(130%);
   box-shadow: 0 8px 26px -4px rgba(0,0,0,0.45);
   transition: transform .25s, box-shadow .25s, background .25s;
 }
