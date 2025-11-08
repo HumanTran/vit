@@ -360,7 +360,16 @@ body {
 /* Desktop optimization: 768px and above */
 @media (min-width: 768px) {
   body {
-    overflow: auto;
+    overflow-y: scroll;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   
   .card {
@@ -388,7 +397,7 @@ body {
   .links {
     gap: 14px;
     margin-top: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .link {
@@ -414,15 +423,6 @@ body {
   }
   
   .qr {
-    width: 130px;
-  }
-  
-  .qr-wrapper {
-    margin: 0 0 20px;
-    position: relative;
-    top: 0px;
-  }
-}
 /* Large desktop: 1024px and above */
 @media (min-width: 1024px) {
   .card {
@@ -443,7 +443,7 @@ body {
   .links {
     gap: 15px;
     margin-top: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
   
   .link {
@@ -459,7 +459,16 @@ body {
     margin-bottom: 25px;
     top: 0px;
   }
-}
+} 
+  .qr {
+    width: 135px;
+  }
+  
+  .qr-wrapper {
+    margin-bottom: 25px;
+    top: 0px;
+  }
+} }
 
 /* Samsung Galaxy S8+: 360x740 */
 @media (min-width: 360px) and (max-width: 360px) and (max-height: 740px) {
