@@ -10,7 +10,10 @@
 }
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body { 
+  height: 100%; 
+  overflow: hidden;
+}
 body {
   margin: 0;
   font-family: 'Righteous', sans-serif;
@@ -38,6 +41,7 @@ body {
   padding: 20px 18px 15px;
   max-width: var(--card-w);
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .profile {
