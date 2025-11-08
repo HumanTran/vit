@@ -161,7 +161,7 @@ body {
 .qr-wrapper {
   display: flex;
   justify-content: center;
-  margin: -70px 0 4px;
+  margin: -100px 0 4px;
 }
 
 .qr {
@@ -219,7 +219,7 @@ body {
     font-size: 16px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -256,7 +256,7 @@ body {
     font-size: 16px;
   }
   .qr-wrapper {
-    margin: -70px 0 2px;
+    margin: -100px 0 2px;
   }
   .qr {
     width: 110px;
@@ -278,7 +278,7 @@ body {
     margin-top: -110px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -297,7 +297,7 @@ body {
     margin-top: -85px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -319,7 +319,7 @@ body {
     width: 150px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -338,7 +338,7 @@ body {
     margin-top: -110px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -360,7 +360,7 @@ body {
     width: 110px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
 
@@ -379,6 +379,6 @@ body {
     margin-top: -80px;
   }
   .qr-wrapper {
-    margin: -70px 0 4px;
+    margin: -100px 0 4px;
   }
 }
