@@ -161,7 +161,7 @@ body {
 .qr-wrapper {
   display: flex;
   justify-content: center;
-  margin: -40px 0 4px;
+  margin: -50px 0 4px;
 }
 
 .qr {
@@ -218,6 +218,9 @@ body {
     height: 36px;
     font-size: 16px;
   }
+  .qr-wrapper {
+    margin: -50px 0 4px;
+  }
 }
 
 @media (max-width: 380px) and (max-height: 670px) {
@@ -253,7 +256,7 @@ body {
     font-size: 16px;
   }
   .qr-wrapper {
-    margin: -30px 0 2px;
+    margin: -50px 0 2px;
   }
   .qr {
     width: 110px;
@@ -274,6 +277,9 @@ body {
     gap: 60px;
     margin-top: -110px;
   }
+  .qr-wrapper {
+    margin: -50px 0 4px;
+  }
 }
 
 /* iPhone 12 Pro: 390x844 */
@@ -289,6 +295,9 @@ body {
   .links {
     gap: 48px;
     margin-top: -85px;
+  }
+  .qr-wrapper {
+    margin: -50px 0 4px;
   }
 }
 
@@ -309,6 +318,9 @@ body {
   .qr {
     width: 150px;
   }
+  .qr-wrapper {
+    margin: -50px 0 4px;
+  }
 }
 
 /* Pixel 7: 412x915 */
@@ -324,6 +336,9 @@ body {
   .links {
     gap: 60px;
     margin-top: -110px;
+  }
+  .qr-wrapper {
+    margin: -50px 0 4px;
   }
 }
 
@@ -344,6 +359,9 @@ body {
   .qr {
     width: 110px;
   }
+  .qr-wrapper {
+    margin: -50px 0 4px;
+  }
 }
 
 /* Samsung Galaxy S20 Ultra: 412x915 */
@@ -359,5 +377,8 @@ body {
   .links {
     gap: 52px;
     margin-top: -80px;
+  }
+  .qr-wrapper {
+    margin: -50px 0 4px;
   }
 }
