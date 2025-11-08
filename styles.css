@@ -413,7 +413,7 @@ body {
   .qr-wrapper {
     margin: 0 0 10px;
     position: relative;
-    top: -40px;
+    top: 0px;
   }
 }
 
@@ -449,7 +449,7 @@ body {
   }
   
   .qr-wrapper {
-    top: -30px;
+    top: 0px;
   }
 }
 
