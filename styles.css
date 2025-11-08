@@ -349,11 +349,102 @@ body {
     font-size: 21px;
   }
   .links {
-    gap: 60px;
+    gap: 52px;
     margin-top: 30px;
   }
   .qr-wrapper {
     margin: 0 0 4px; position: relative; top: -150px;
+  }
+}
+
+/* Desktop optimization: 768px and above */
+@media (min-width: 768px) {
+  .card {
+    max-width: 500px;
+    padding: 40px 30px 30px;
+  }
+  
+  .profile {
+    margin-top: 40px;
+  }
+  
+  .avatar {
+    width: 140px;
+    height: 140px;
+    font-size: 35px;
+  }
+  
+  .name {
+    font-size: 32px;
+    margin: 12px 0 8px;
+  }
+  
+  .links {
+    gap: 24px;
+    margin-top: 50px;
+  }
+  
+  .link {
+    padding: 18px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: transform .2s, box-shadow .2s, background .2s;
+  }
+  
+  .link .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+  
+  .link .icon img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .link:hover {
+    transform: translateY(-6px);
+  }
+  
+  .qr {
+    width: 180px;
+  }
+  
+  .qr-wrapper {
+    margin: 0 0 10px;
+    position: relative;
+    top: -80px;
+  }
+}
+
+/* Large desktop: 1024px and above */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 550px;
+    padding: 50px 40px 40px;
+  }
+  
+  .avatar {
+    width: 160px;
+    height: 160px;
+    font-size: 40px;
+  }
+  
+  .name {
+    font-size: 36px;
+  }
+  
+  .links {
+    gap: 28px;
+    margin-top: 60px;
+  }
+  
+  .link {
+    font-size: 19px;
+  }
+  
+  .qr {
+    width: 200px;
   }
 }
 
