@@ -196,8 +196,8 @@ body {
     margin-top: 20px;
   }
   .links {
-    gap: 48px;
-    margin-top: -110px;
+    gap: 40px;
+    margin-top: -90px;
   }
   .avatar {
     width: 67px;
@@ -240,8 +240,8 @@ body {
     font-size: 10px;
   }
   .links {
-    gap: 36px;
-    margin-top: -100px;
+    gap: 30px;
+    margin-top: -85px;
   }
   .link {
     padding: 9px 12px;
@@ -256,7 +256,7 @@ body {
     margin: -8px 0 2px;
   }
   .qr {
-    width: 120px;
+    width: 110px;
   }
 }
 
@@ -287,8 +287,8 @@ body {
     font-size: 20px;
   }
   .links {
-    gap: 57px;
-    margin-top: -110px;
+    gap: 48px;
+    margin-top: -85px;
   }
 }
 
@@ -303,8 +303,8 @@ body {
     font-size: 22px;
   }
   .links {
-    gap: 63px;
-    margin-top: -110px;
+    gap: 55px;
+    margin-top: -80px;
   }
   .qr {
     width: 150px;
@@ -338,8 +338,8 @@ body {
     font-size: 18px;
   }
   .links {
-    gap: 42px;
-    margin-top: -105px;
+    gap: 38px;
+    margin-top: -95px;
   }
   .qr {
     width: 110px;
@@ -357,7 +357,7 @@ body {
     font-size: 21px;
   }
   .links {
-    gap: 60px;
-    margin-top: -110px;
+    gap: 52px;
+    margin-top: -80px;
   }
 }
